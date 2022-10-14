@@ -12,7 +12,7 @@ import { element } from 'protractor';
 })
 export class CategoryService {
 
-  private apiPath: string= "api/categories";
+  private apiPath: string = "api/categories";
 
   constructor(private http: HttpClient) { }
 
@@ -32,10 +32,10 @@ export class CategoryService {
     )
   }
 
-  create (category: Category): Observable<Category[]> {
+  create (category: Category): Observable<Category> {
     return this.http.post(this.apiPath, category).pipe(
       catchError(this.handleError),
-      map(this.jsonDataToCategories)
+      map(this.jsonDataToCategory)
     )
   }
 
