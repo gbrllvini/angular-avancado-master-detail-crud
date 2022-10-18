@@ -11,7 +11,6 @@ import { CategoryService } from "../../categories/shared/category.service";
 import { switchMap } from "rxjs/operators";
 
 import * as toastr from 'toastr';
-import { type } from 'os';
 
 @Component({
   selector: 'app-entry-form',
