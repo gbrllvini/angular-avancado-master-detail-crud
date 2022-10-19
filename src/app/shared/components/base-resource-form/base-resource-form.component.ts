@@ -58,13 +58,13 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
 
 
   //PRIVATE METHODS 
+
   protected setCurrentAction() {
     if (this.route.snapshot.url[0].path == 'new')
       this.currentAction = 'new'
     else
       this.currentAction = 'edit'
   }
-
 
   protected loadResource() {
     if (this.currentAction == 'edit') {
@@ -100,7 +100,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
 
   }
 
-
   protected createResource() {
     const resource: T = this.jsonDataToResourceFn(this.resourceForm.value);
 
@@ -111,7 +110,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
       )
 
   }
-
 
   protected updateResource() {
     const resource: T = this.jsonDataToResourceFn(this.resourceForm.value);
@@ -124,7 +122,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
 
   }
 
-
   protected actionsForSuccess(resource: T) {
     toastr.success('Solicitação processada com sucesso!');
 
@@ -134,7 +131,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
       () => this.router.navigate([baseComponentPath, resource.id, 'edit'])
     )
   }
-
 
   protected actionsForError(error) {
 
@@ -150,5 +146,4 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
   }
 
   protected abstract buildResourceForm(): void;
-
 }
