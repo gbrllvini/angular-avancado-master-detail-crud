@@ -6,6 +6,7 @@ import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.compon
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { FormFieldErrorComponent } from './components/form-field-error/form-field-error.component';
 import { ServerErrorMessagesComponent } from './components/server-error-messages/server-error-messages.component';
+import { NavbarComponent } from '../core/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
